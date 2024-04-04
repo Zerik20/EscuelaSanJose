@@ -20,7 +20,7 @@ const description =
 ---
 
 <!doctype html>
-<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="white">
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -46,13 +46,13 @@ const description =
         document.documentElement.dataset.theme = themeSaved;
       } else {
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: white)",
+          "(prefers-color-scheme: light)",
         ).matches;
-        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+        document.documentElement.dataset.theme = preferslight ? "dark" : "light";
       }
 
       window
-        .matchMedia("(prefers-color-scheme: dark)")
+        .matchMedia("(prefers-color-scheme: light)",)
         .addEventListener("change", (event) => {
           if (!localStorage.getItem("theme")) {
             document.documentElement.dataset.theme = event.matches

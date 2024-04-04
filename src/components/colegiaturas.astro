@@ -1,0 +1,79 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import type { ColItem } from "~/types";
+
+const features: Array<ColItem> = [
+  {
+    title: "Basic",
+    price1:"Diciembre-febrero: $25,900",
+    price2:"Marzo-mayo: $27,400",
+    price3:"Junio-agosto: $28,900",
+    cole1:"Colegiatura 11 meses: 7,681.00",
+    cole2:"Colegiatura 10 meses: 8,450.00",
+    title2:"Extras:",
+    extra:"Música, baile moderno, danza, ajedrez, pintura, teatro, dibujo, canto.",
+    dp:"Deportes Profesionales: rugby, fútbol, atletismo.",
+    idiom:"Idiomas: español, francés, inglés",
+    horario:"Horario de 7am a 2pm",
+    icon: "mdi:account-group",
+  },
+  {
+    title: "Premium",
+    price1:"Diciembre-febrero: $26,900",
+    price2:"Marzo-mayo: $28,400",
+    price3:"Junio-agosto: $29,900",
+    cole1:"Colegiatura 11 meses: 16,727.00",
+    cole2:"Colegiatura 10 meses: 18,500.00",
+    title2:"Extras:",
+    extra:"Música, baile moderno, danza, ajedrez, pintura, teatro, dibujo, canto.",
+    dp:"Deportes Profesionales: rugby, fútbol, atletismo, golf, tenis.",
+    idiom:"Idiomas: español, francés, inglés",
+    horario:"Horario de 7am a 6pm",
+    icon: "mdi:feather",
+  },
+];
+---
+
+<ContentSection title="Tuition fee" id="colegiaturas">
+  <Fragment slot="lead">
+    Inscripción anual
+    <ul class="text-primary">
+      <li>•	Incorporación a la SEP</li>
+      <li>•	Seguro de accidentes escolares</li>
+      <li>•	Cuota de sociedad de padres de familia </li>
+      <li>•	Credencial escolar </li>
+      <li>•	Plataforma digital</li>
+      <li>•	Uniforme </li>
+      <li>•	Paquete de libros y cuadernos</li>
+      </ul>
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    {
+      features.map(({ title, price1, price2, price3,cole1,cole2,extra,title2,dp,idiom,horario, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-ellipsis">{price1}</p>
+          <p class="text-center text-ellipsis">{price2}</p>
+          <p class="text-center text-ellipsis">{price3}</p>
+          <p class="text-center text-offset text-sm">{cole1}</p>
+          <p class="text-center text-offset text-sm">{cole2}</p>
+          <p class="text-center font-extrabold text-xl">{title2}</p>
+          <p class="text-center text-offset text-sm">{extra}</p>
+          <p class="text-center text-offset text-sm">{dp}</p>
+          <p class="text-center text-offset text-sm">{idiom}</p>
+          <p class="text-center font-extrabold text-xl">{horario}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
+<ContentSection title="" id="">
+  <Fragment slot="lead">
+    <span class="text-primary text-sm">•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024</span>
+  <br><span class="text-sm">•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025</span> 
+  </Fragment>
+</ContentSection>

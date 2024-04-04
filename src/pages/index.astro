@@ -11,6 +11,7 @@ import Splash from "~/components/splash.astro";
 import Reto from "~/components/reto.astro";
 import Cass from "~/components/cass.astro";
 import News from "~/components/news.astro";
+import Colegiaturas from "~/components/colegiaturas.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -48,7 +49,7 @@ const description =
         const prefersDark = window.matchMedia(
           "(prefers-color-scheme: light)",
         ).matches;
-        document.documentElement.dataset.theme = preferslight ? "dark" : "light";
+        document.documentElement.dataset.theme = prefers ? "dark" : "light";
       }
 
       window
@@ -73,6 +74,7 @@ const description =
       <Arts />
       <Reto />
       <Cass />
+      <Colegiaturas />
       <!--Features /-->
       <News />
     </div>

@@ -1,0 +1,57 @@
+---
+import CompatibilityList from "~/components/arts-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const arts: Array<CompatibilityItem> = [
+  {
+    title: "Orchestra",
+    icon: "arts/orquesta",
+    url: "",
+  },
+  {
+    title: "Chorus",
+    icon: "arts/coro",
+    url: "",
+  },
+  {
+    title: "Theater",
+    icon: "arts/teatro",
+    url: "",
+  },
+  {
+    title: "Dance",
+    icon: "arts/danza",
+    url: "",
+  },
+  {
+    title: "Art Workshops",
+    icon: "arts/talleres",
+    url: "",
+  },
+  {
+    title: "Photography",
+    icon: "arts/fotografia",
+    url: "",
+  },
+  {
+    title: "Gastronomy",
+    icon: "arts/gastronomia",
+    url: "",
+  },
+];
+
+---
+
+<ContentSection title="Art Life" id="arts">
+  <Fragment slot="lead">
+    Express <span class="text-primary">your feelings</span> and {" "}
+    <span class="text-primary">raise new </span>
+    horizons<span class="text-primary"></span>
+  </Fragment>
+  <CompatibilityList
+    items={arts}
+    title="Art Life"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

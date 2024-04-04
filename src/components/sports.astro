@@ -1,0 +1,90 @@
+---
+import CompatibilityList from "~/components/sports-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const sports: Array<CompatibilityItem> = [
+  {
+    title: "Soccer",
+    icon: "sports/futbol",
+    url: "",
+  },
+  {
+    title: "Rugby",
+    icon: "sports/rugby",
+    url: "",
+  },
+  {
+    title: "Athletics",
+    icon: "sports/atletismo",
+    url: "",
+  },
+  {
+    title: "Baseball",
+    icon: "sports/beisbol",
+    url: "",
+  },
+  {
+    title: "Volleyball",
+    icon: "sports/voley",
+    url: "",
+  },
+  {
+    title: "Swimming",
+    icon: "sports/piscina",
+    url: "",
+  },
+  {
+    title: "Fitness Room and CrossFit",
+    icon: "sports/fitness",
+    url: "",
+  },
+  
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "Netlify",
+    icon: "platforms/netlify",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Vercel",
+    icon: "platforms/vercel",
+    url: "https://vercel.com/",
+  },
+  {
+    title: "Cloudflare",
+    icon: "fa-brands:cloudflare",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "Render",
+    icon: "platforms/render",
+    url: "https://render.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "GitLab",
+    icon: "fa-brands:gitlab",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+---
+
+<ContentSection title="Sports" id="sports">
+  <Fragment slot="lead">
+    A <span class="text-primary">paradaise</span> for {" "}
+    <span class="text-primary">sports</span>
+    lovers<span class="text-primary"></span>
+  </Fragment>
+  <CompatibilityList
+    items={sports}
+    title="Sports"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

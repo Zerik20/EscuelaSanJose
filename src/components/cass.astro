@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Culture",
+    description:
+      "The set of beliefs, values, and traditions shared by a group of people.",
+    icon: "mdi:account-group",
+  },
+  {
+    title: "Art",
+    description:
+      "Creative expression that can take various forms such as painting, music, literature, etc.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Sports",
+    description:
+      "Physical or mental activities that promote health and teamwork, such as soccer, basketball, etc.",
+    icon: "sports/atletismo"
+  },
+  {
+    title: "Community Service",
+    description:
+      "Voluntary activity to benefit a community, such as helping those in need or improving the environment.",
+    icon: "mdi:handshake",
+  },
+];
+---
+
+<ContentSection title="C.A.S.S" id="cass">
+  <Fragment slot="lead">
+    We provide students <span class="text-primary">with experiences in various areas </span>to promote their holistic development, 
+    <span class="text-primary">shape well-rounded </span>
+    and balanced <span class="text-primary">individuals</span>.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

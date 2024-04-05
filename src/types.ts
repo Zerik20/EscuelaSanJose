@@ -22,6 +22,19 @@ export interface ColItem {
   icon: string;
   title: string;
   title2: string;
+  anual: string;
+  incluye: string;
+  inc1: string;
+  inc2: string;
+  inc3: string;
+  inc4: string;
+  inc5: string;
+  inc6: string;
+  inc7: string;
+  desc: string;
+  desc1: string;
+  desc2: string;
+  text2: string;
 }
 
 export interface FooterLink {

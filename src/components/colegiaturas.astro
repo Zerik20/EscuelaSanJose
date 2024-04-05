@@ -5,67 +5,153 @@ import type { ColItem } from "~/types";
 
 const features: Array<ColItem> = [
   {
-    title: "Basic",
+    title: "Estandar",
+    anual: "Incripción anual",
     price1:"Diciembre-febrero: $25,900",
     price2:"Marzo-mayo: $27,400",
     price3:"Junio-agosto: $28,900",
     cole1:"Colegiatura 11 meses: 7,681.00",
     cole2:"Colegiatura 10 meses: 8,450.00",
+    incluye: "Incluye",
+    inc1:"•	Incorporación a la SEP ",
+    inc2:"•	Seguro de accidentes escolares",
+    inc3:"•	Cuota de sociedad de padres de familia",
+    inc4:"•	Credencial escolar ",
+    inc5:"•	Plataforma digital",
+    inc6:"•	Uniforme ",
+    inc7:"•	Paquete de libros y cuadernos",
+    desc:"Descuentos",
+    desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
+    desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
     title2:"Extras:",
     extra:"Música, baile moderno, danza, ajedrez, pintura, teatro, dibujo, canto.",
     dp:"Deportes Profesionales: rugby, fútbol, atletismo.",
     idiom:"Idiomas: español, francés, inglés",
+    text2:"",
     horario:"Horario de 7am a 2pm",
-    icon: "mdi:account-group",
+    icon: "mdi:weather-sunny",
   },
   {
-    title: "Premium",
-    price1:"Diciembre-febrero: $26,900",
-    price2:"Marzo-mayo: $28,400",
-    price3:"Junio-agosto: $29,900",
+    title: "Semi-Internado",
+    anual:"Inscripción anual",
+    price1:"Diciembre-febrero: $25,900",
+    price2:"Marzo-mayo: $27,400",
+    price3:"Junio-agosto: $28,900",
     cole1:"Colegiatura 11 meses: 16,727.00",
     cole2:"Colegiatura 10 meses: 18,500.00",
+    incluye: "Incluye",
+    inc1:"•	Incorporación a la SEP ",
+    inc2:"•	Seguro de accidentes escolares",
+    inc3:"•	Cuota de sociedad de padres de familia",
+    inc4:"•	Credencial escolar ",
+    inc5:"•	Plataforma digital",
+    inc6:"•	Uniforme ",
+    inc7:"•	Paquete de libros y cuadernos",
+    desc:"Descuentos",
+    desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
+    desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
     title2:"Extras:",
     extra:"Música, baile moderno, danza, ajedrez, pintura, teatro, dibujo, canto.",
     dp:"Deportes Profesionales: rugby, fútbol, atletismo, golf, tenis.",
     idiom:"Idiomas: español, francés, inglés",
     horario:"Horario de 7am a 6pm",
-    icon: "mdi:feather",
+    text2:"Incluyen desayuno, comida y colaciones",
+    icon: "mdi:weather-sunset-down",
+  },
+];
+const features2: Array<ColItem> = [
+  {
+    title: "Estandar",
+    anual: "Incripción anual",
+    price1:"Diciembre-febrero: $26,900",
+    price2:"Marzo-mayo: $28,400",
+    price3:"Junio-agosto: $29,900",
+    cole1:"Colegiatura 11 meses: 8,363.00",
+    cole2:"Colegiatura 10 meses: 9,199.00",
+    incluye: "Incluye",
+    inc1:"•	Incorporación a la SEP ",
+    inc2:"•	Seguro de accidentes escolares",
+    inc3:"•	Cuota de sociedad de padres de familia",
+    inc4:"•	Credencial escolar ",
+    inc5:"•	Plataforma digital",
+    inc6:"•	Uniforme ",
+    inc7:"•	Paquete de libros y cuadernos",
+    desc:"Descuentos",
+    desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
+    desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
+    title2:"Extras:",
+    extra:"Música, baile moderno, danza, ajedrez, pintura, teatro, dibujo, canto.",
+    dp:"Deportes Profesionales: rugby, fútbol, atletismo.",
+    idiom:"Idiomas: español, francés, inglés y chino",
+    text2:"",
+    horario:"Horario de 7am a 2pm",
+    icon: "mdi:weather-sunny",
+  },
+  {
+    title: "Semi-Internado",
+    anual:"Inscripción anual",
+    price1:"Diciembre-febrero: $26,900",
+    price2:"Marzo-mayo: $28,400",
+    price3:"Junio-agosto: $29,900",
+    cole1:"Colegiatura 11 meses: 17,727.00",
+    cole2:"Colegiatura 10 meses: 19,500.00",
+    incluye: "Incluye",
+    inc1:"•	Incorporación a la SEP ",
+    inc2:"•	Seguro de accidentes escolares",
+    inc3:"•	Cuota de sociedad de padres de familia",
+    inc4:"•	Credencial escolar ",
+    inc5:"•	Plataforma digital",
+    inc6:"•	Uniforme ",
+    inc7:"•	Paquete de libros y cuadernos",
+    desc:"Descuentos",
+    desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
+    desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
+    title2:"Extras:",
+    extra:"Música, baile moderno, danza, ajedrez, pintura, teatro, dibujo, canto.",
+    dp:"Deportes Profesionales: rugby, fútbol, atletismo, golf, tenis.",
+    idiom:"Idiomas: español, francés, inglés y chino",
+    horario:"Horario de 7am a 6pm",
+    text2:"Incluyen desayuno, comida y colaciones",
+    icon: "mdi:weather-sunset-down",
   },
 ];
 ---
 
-<ContentSection title="Tuition fee" id="colegiaturas">
+<ContentSection title="Colegiaturas" id="colegiaturas">
   <Fragment slot="lead">
-    Inscripción anual
-    <ul class="text-primary">
-      <li>•	Incorporación a la SEP</li>
-      <li>•	Seguro de accidentes escolares</li>
-      <li>•	Cuota de sociedad de padres de familia </li>
-      <li>•	Credencial escolar </li>
-      <li>•	Plataforma digital</li>
-      <li>•	Uniforme </li>
-      <li>•	Paquete de libros y cuadernos</li>
-      </ul>
+    Primaria
   </Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     {
-      features.map(({ title, price1, price2, price3,cole1,cole2,extra,title2,dp,idiom,horario, icon }) => (
+      features.map(({ title, price1, price2, price3,cole1,cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,desc,desc1,desc2,text2, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
           <div class="size-16 rounded-full border-2 border-current p-3">
             <Icon name={icon} class="size-full" />
           </div>
           <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center font-bold">{anual}</p>
           <p class="text-center text-ellipsis">{price1}</p>
           <p class="text-center text-ellipsis">{price2}</p>
           <p class="text-center text-ellipsis">{price3}</p>
-          <p class="text-center text-offset text-sm">{cole1}</p>
-          <p class="text-center text-offset text-sm">{cole2}</p>
+          <p class="text-center font-bold">{incluye}</p>
+          <p class="text-center text-offset text-sm">{inc1}</p>
+          <p class="text-center text-offset text-sm">{inc2}</p>
+          <p class="text-center text-offset text-sm">{inc3}</p>
+          <p class="text-center text-offset text-sm">{inc4}</p>
+          <p class="text-center text-offset text-sm">{inc5}</p>
+          <p class="text-center text-offset text-sm">{inc6}</p>
+          <p class="text-center text-offset text-sm">{inc7}</p>
+          <p class="text-center text-ellipsis">{cole1}</p>
+          <p class="text-center text-ellipsis">{cole2}</p>
+          <p class="text-center font-bold">{desc}</p>
+          <p class="text-center text-offset text-sm">{desc1}</p>
+          <p class="text-center text-offset text-sm">{desc2}</p>
           <p class="text-center font-extrabold text-xl">{title2}</p>
           <p class="text-center text-offset text-sm">{extra}</p>
           <p class="text-center text-offset text-sm">{dp}</p>
           <p class="text-center text-offset text-sm">{idiom}</p>
           <p class="text-center font-extrabold text-xl">{horario}</p>
+          <p class="text-center text-offset text-sm">{text2}</p>
         </li>
       ))
     }
@@ -73,7 +159,42 @@ const features: Array<ColItem> = [
 </ContentSection>
 <ContentSection title="" id="">
   <Fragment slot="lead">
-    <span class="text-primary text-sm">•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024</span>
-  <br><span class="text-sm">•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025</span> 
+    Secundaria
   </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    {
+      features2.map(({ title, price1, price2, price3,cole1,cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,desc,desc1,desc2,text2, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center font-bold">{anual}</p>
+          <p class="text-center text-ellipsis">{price1}</p>
+          <p class="text-center text-ellipsis">{price2}</p>
+          <p class="text-center text-ellipsis">{price3}</p>
+          <p class="text-center font-bold">{incluye}</p>
+          <p class="text-center text-offset text-sm">{inc1}</p>
+          <p class="text-center text-offset text-sm">{inc2}</p>
+          <p class="text-center text-offset text-sm">{inc3}</p>
+          <p class="text-center text-offset text-sm">{inc4}</p>
+          <p class="text-center text-offset text-sm">{inc5}</p>
+          <p class="text-center text-offset text-sm">{inc6}</p>
+          <p class="text-center text-offset text-sm">{inc7}</p>
+          <p class="text-center text-ellipsis">{cole1}</p>
+          <p class="text-center text-ellipsis">{cole2}</p>
+          <p class="text-center font-bold">{desc}</p>
+          <p class="text-center text-offset text-sm">{desc1}</p>
+          <p class="text-center text-offset text-sm">{desc2}</p>
+          <p class="text-center font-extrabold text-xl">{title2}</p>
+          <p class="text-center text-offset text-sm">{extra}</p>
+          <p class="text-center text-offset text-sm">{dp}</p>
+          <p class="text-center text-offset text-sm">{idiom}</p>
+          <p class="text-center font-extrabold text-xl">{horario}</p>
+          <p class="text-center text-offset text-sm">{text2}</p>
+        </li>
+      ))
+    }
+  </ul>
 </ContentSection>
+

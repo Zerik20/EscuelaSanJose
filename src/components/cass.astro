@@ -5,27 +5,27 @@ import type { FeatureItem } from "~/types";
 
 const features: Array<FeatureItem> = [
   {
-    title: "Culture",
+    title: "Cultura",
     description:
-      "The set of beliefs, values, and traditions shared by a group of people.",
+      "El conjunto de creencias, valores y tradiciones compartidas por un grupo de personas.",
     icon: "mdi:account-group",
   },
   {
-    title: "Art",
+    title: "Arte",
     description:
-      "Creative expression that can take various forms such as painting, music, literature, etc.",
+      "Expresión creativa que puede tomar diversas formas como la pintura, la música, la literatura, etc.",
     icon: "mdi:feather",
   },
   {
     title: "Sports",
     description:
-      "Physical or mental activities that promote health and teamwork, such as soccer, basketball, etc.",
+      "Actividades físicas o mentales que promueven la salud y el trabajo en equipo, como el fútbol, el baloncesto, etc.",
     icon: "sports/atletismo"
   },
   {
-    title: "Community Service",
+    title: "Servicio Comunitario",
     description:
-      "Voluntary activity to benefit a community, such as helping those in need or improving the environment.",
+      "Actividad voluntaria para beneficiar a una comunidad, como ayudar a los necesitados o mejorar el medio ambiente.",
     icon: "mdi:handshake",
   },
 ];
@@ -33,10 +33,13 @@ const features: Array<FeatureItem> = [
 
 <ContentSection title="C.A.S.S" id="cass">
   <Fragment slot="lead">
-    We provide students <span class="text-primary">with experiences in various areas </span>to promote their holistic development, 
-    <span class="text-primary">shape well-rounded </span>
-    and balanced <span class="text-primary">individuals</span>.
-  </Fragment>
+    Proporcionamos a los estudiantes 
+    <span class="text-primary">experiencias en diversas áreas </span>
+    para promover su desarrollo holístico, 
+    <span class="text-primary">formar individuos bien redondeados </span>
+    y equilibrados <span class="text-primary">.</span>
+</Fragment>
+
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     {
       features.map(({ title, description, icon }) => (

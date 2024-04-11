@@ -37,7 +37,6 @@ export interface ColItem {
   desc2: string;
   text2: string;
 }
-
 export interface FooterLink {
   description: string;
   icon: string;

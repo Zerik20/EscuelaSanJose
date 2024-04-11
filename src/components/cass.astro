@@ -9,29 +9,33 @@ const features: Array<FeatureItem> = [
     description:
       "El conjunto de creencias, valores y tradiciones compartidas por un grupo de personas.",
     icon: "mdi:account-group",
+    background: "/src/assets/img/Cultura.png",
   },
   {
     title: "Arte",
     description:
       "Expresión creativa que puede tomar diversas formas como la pintura, la música, la literatura, etc.",
     icon: "mdi:feather",
+    background: "/src/assets/img/Arte.png",
   },
   {
-    title: "Sports",
+    title: "Deportes",
     description:
       "Actividades físicas o mentales que promueven la salud y el trabajo en equipo, como el fútbol, el baloncesto, etc.",
-    icon: "sports/atletismo"
+    icon: "sports/atletismo",
+    background: "/src/assets/img/Deporte.png",
   },
   {
     title: "Servicio Comunitario",
     description:
       "Actividad voluntaria para beneficiar a una comunidad, como ayudar a los necesitados o mejorar el medio ambiente.",
     icon: "mdi:handshake",
+    background: "/src/assets/img/ServSoc.png",
   },
 ];
 ---
 
-<ContentSection title="C.A.S.S" id="cass">
+<ContentSection title="C.A.D.S" id="cass">
   <Fragment slot="lead">
     Proporcionamos a los estudiantes 
     <span class="text-primary">experiencias en diversas áreas </span>
@@ -42,8 +46,8 @@ const features: Array<FeatureItem> = [
 
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     {
-      features.map(({ title, description, icon }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+      features.map(({ title, description, icon, background }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6" style={`background-image: url('${background}'); background-size: cover; background-position: center;`}>
           <div class="size-16 rounded-full border-2 border-current p-3">
             <Icon name={icon} class="size-full" />
           </div>

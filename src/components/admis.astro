@@ -7,7 +7,7 @@ import ContentSection from "~/components/content-section.astro";
   <!-- Contenido principal -->
   <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
     <a
-      href="https://astro.new/"
+      href=""
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
       <Icon name="mdi:rocket" class="size-8" />
@@ -18,34 +18,59 @@ import ContentSection from "~/components/content-section.astro";
       <span>Formulario de aplicación</span>
     </a>
   </div>
-  <form id="formulario" class="hidden mt-4">
+  <form id="formulario" class="hidden mt-4" action="https://formsubmit.co/5d3b12d7cc002fa4925614161fc60924" method="POST">
     <!-- Contenido de tu formulario -->
     <div class="flex flex-col items-center">
-      <label for="nombre" class="mb-2">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
-      <!-- Agrega aquí el resto de los campos de tu formulario -->
-      <!-- Ejemplo de otro campo -->
-      <label for="email" class="mb-2">Email:</label>
-      <input type="email" id="email" name="email" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
-      
+      <label for="nombre" class="mb-2">Nombre del alumno:</label>
+      <input type="text" id="nombre" name="name" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
+  
+      <label for="email" class="mb-2">Email del tutor:</label>
+      <input type="email" id="email" name="email" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
+  
+      <label for="numero" class="mb-2">Número del tutor:</label>
+      <input type="text" id="numero" name="numero" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
+  
+      <!-- Lista desplegable para el área de interés -->
+      <label for="area" class="mb-2">Área de Interés:</label>
+      <select id="area" name="area" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+        <option value="primaria">Primaria</option>
+        <option value="secundaria">Secundaria</option>
+      </select>
+  
+      <!-- Lista desplegable para la nacionalidad -->
+      <label for="nacionalidad" class="mb-2">Nacionalidad:</label>
+      <select id="nacionalidad" name="nacionalidad" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+        <option value="Francia">Francia</option>
+        <option value="España">España</option>
+        <option value="México">México</option>
+        <option value="Alemania">Alemania</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <!-- Agrega más opciones de nacionalidades según necesites -->
+      </select>
+  
       <!-- Botón de enviar -->
       <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Enviar</button>
     </div>
   </form>
+  
 
-  <!-- Script -->
-  <script>
-    const toggleForm = (event: MouseEvent) => {
-      event.preventDefault();
-      const form = document.getElementById('formulario');
-      if (form) {
-        form.classList.toggle('hidden');
+    <!-- Script -->
+    <script>
+      const toggleForm = (event: MouseEvent) => {
+        event.preventDefault();
+        const form = document.getElementById('formulario');
+        if (form) {
+          form.classList.toggle('hidden');
+        }
+      };
+  
+      const toggleFormButton = document.getElementById('toggleFormButton');
+      if (toggleFormButton) {
+        toggleFormButton.addEventListener('click', toggleForm);
       }
-    };
-
-    const toggleFormButton = document.getElementById('toggleFormButton');
-    if (toggleFormButton) {
-      toggleFormButton.addEventListener('click', toggleForm);
-    }
-  </script>
-</ContentSection>
+    </script>
+  </ContentSection>
+  
+  
+  
+  

@@ -1,24 +1,25 @@
 ---
 import { Icon } from "astro-icon/components";
+import { AstroError } from "node_modules/astro/dist/core/errors";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
 
 const features: Array<FeatureItem> = [
   {
     title: "Cultura",
-    background: "/src/content/showcase/_images/Cultura.jpg",
+    background: "https://revistavive.com/wp-content/uploads/2016/08/Kids-Changing-the-World-c2e7f35f.jpg",
   },
   {
     title: "Arte",
-    background: "/src/content/showcase/_images/Arte.jpg",
+    background: "https://images.pexels.com/photos/1518836/pexels-photo-1518836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     title: "Deportes",
-    background: "/src/content/showcase/_images/Deporte.jpg",
+    background: "https://images.pexels.com/photos/15874977/pexels-photo-15874977/free-photo-of-jugando-deporte-pelota-bola.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     title: "Servicio Comunitario",
-    background: "/src/content/showcase/_images/ServSoc.jpg",
+    background: "https://img.freepik.com/foto-gratis/ninos-caja-donacion_23-2148480283.jpg?t=st=1712942722~exp=1712946322~hmac=007a4fc838202d6d00156d4f79d527e060ee2e7ac4a48e68baaa7c71ea2bbeff&w=740",
   },
 ];
 ---
@@ -38,7 +39,8 @@ const features: Array<FeatureItem> = [
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6" style={`background-image: url('${background}'); background-size: cover; background-position: center;`}>
           <div class="size-16 rounded-full border-0 border-current p-10">
           </div>
-          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center font-extrabold text-xl" style="color: rgb(207, 178, 14);">{title}</p>
+
         </li>
       ))
     }

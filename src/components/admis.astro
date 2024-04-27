@@ -3,70 +3,74 @@ import { Icon } from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 ---
 
-<ContentSection title="Admisiones" id="admis">
+<ContentSection title="Admisión" id="admis">
  
   <!-- Contenido principal -->
-  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
-      href=""
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon name="mdi:rocket" class="size-8" />
-      <span>Aviso de privacidad</span>
-    </a>
-    <a id="toggleFormButton" href="#" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
-      <Icon name="mdi:telescope" class="size-8" />
-      <span>Formulario de aplicación</span>
-    </a>
-  </div>
-  <form id="formulario" class="hidden mt-4" action="https://formsubmit.co/25f509882166613c0f4ff0fabd9ada2a" method="POST">
-    <!-- Contenido de tu formulario -->
-    <div class="flex flex-col items-center">
-      <label for="nombre" class="mb-2">Nombre del alumno:</label>
-      <input type="text" id="nombre" name="name" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-  
-      <label for="email" class="mb-2">Email del tutor:</label>
-      <input type="email" id="email" name="email" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-  
-      <label for="numero" class="mb-2">Número del tutor:</label>
-      <input type="number" id="numero" name="numero" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-  
-      <!-- Lista desplegable para el área de interés -->
-      <label for="area" class="mb-2">Área de Interés:</label>
-      <select id="area" name="area" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
-        <option value="primaria">Primaria</option>
-        <option value="secundaria">Secundaria</option>
-      </select>
-  
-      <!-- Lista desplegable para la nacionalidad -->
-      <label for="nacionalidad" class="mb-2">Nacionalidad del alumno:</label>
-      <input type="text" id="nacionalidad" name="nacionalidad" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-
-        <!-- Agrega más opciones de nacionalidades según necesites -->
-  
-      <!-- Botón de enviar -->
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Enviar</button>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:flex md:justify-between">
+    <img src="src/assets/img/ninos.jpg" class="w-full md:w-1/2 h-auto max-w-full mb-4 md:mb-0 md:mr-4 order-last md:order-first object-cover transition-all duration-500 ease-in-out transform hover:scale-105">
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-center">
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-1 transition-all duration-500 ease-in-out transform" id="buttonContainer">
+        <a
+          href=""
+          class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 transition-all duration-500 ease-in-out transform hover:scale-105"
+        >
+          <Icon name="mdi:rocket" class="size-8" />
+          <span>Aviso de privacidad</span>
+        </a>
+        <a id="toggleFormButton" href="#" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 transition-all duration-500 ease-in-out transform hover:scale-105">
+          <Icon name="mdi:telescope" class="size-8" />
+          <span>Formulario de aplicación</span>
+        </a>
+      </div>
+      <form id="formulario" class="hidden mt-4 transition-all duration-500 ease-in-out transform scale-0" action="https://formsubmit.co/25f509882166613c0f4ff0fabd9ada2a" method="POST">
+        <!-- Contenido de tu formulario -->
+        <div class="flex flex-col items-center">
+          <!-- Aquí va el contenido de tu formulario -->
+          <label for="nombre" class="mb-2">Nombre del alumno:</label>
+          <input type="text" id="nombre" name="name" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
+      
+          <label for="email" class="mb-2">Email del tutor:</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
+      
+          <label for="numero" class="mb-2">Número del tutor:</label>
+          <input type="number" id="numero" name="numero" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
+      
+          <!-- Lista desplegable para el área de interés -->
+          <label for="area" class="mb-2">Área de Interés:</label>
+          <select id="area" name="area" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+            <option value="primaria">Primaria</option>
+            <option value="secundaria">Secundaria</option>
+          </select>
+      
+          <!-- Lista desplegable para la nacionalidad -->
+          <label for="nacionalidad" class="mb-2">Nacionalidad del alumno:</label>
+          <input type="text" id="nacionalidad" name="nacionalidad" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
+    
+            <!-- Agrega más opciones de nacionalidades según necesites -->
+      
+          <!-- Botón de enviar -->
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Enviar</button>
+        </div>
+      </form>
     </div>
-  </form>
-  <img src="src/assets/img/ninos.jpg" class="w-auto h-auto max-w-full mb-4 md:mb-0 md:mr-4">
+  </div>
 
-    <!-- Script -->
-    <script>
-      const toggleForm = (event: MouseEvent) => {
-        event.preventDefault();
-        const form = document.getElementById('formulario');
-        if (form) {
-          form.classList.toggle('hidden');
-        }
-      };
-  
-      const toggleFormButton = document.getElementById('toggleFormButton');
-      if (toggleFormButton) {
-        toggleFormButton.addEventListener('click', toggleForm);
+  <!-- Script -->
+  <script>
+    const toggleForm = (event: MouseEvent) => {
+      event.preventDefault();
+      const form = document.getElementById('formulario');
+      const buttonContainer = document.getElementById('buttonContainer');
+      if (form && buttonContainer) {
+        form.classList.toggle('hidden');
+        form.classList.toggle('scale-105');
+        form.style.transition = 'transform 0.9s ease-in-out';
       }
-    </script>
-  </ContentSection>
-  
-  
-  
-  
+    }
+
+    const toggleFormButton = document.getElementById('toggleFormButton');
+    if (toggleFormButton) {
+      toggleFormButton.addEventListener('click', toggleForm);
+    }
+  </script>
+</ContentSection>

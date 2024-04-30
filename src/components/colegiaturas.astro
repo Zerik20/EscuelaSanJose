@@ -8,8 +8,8 @@ const features: Array<ColItem> = [
     title: "Estandar",
     anual: "Incripción anual",
     price1:"Diciembre-febrero: $25,900",
-    price2:"Marzo-mayo: $27,400",
-    price3:"Junio-agosto: $28,900",
+    price2:"Marzo-mayo: $33,155",
+    price3:"Junio-agosto: $34,900",
     cole1:"Colegiatura 11 meses: 7,681.00",
     cole2:"Colegiatura 10 meses: 8,450.00",
     incluye: "Incluye",
@@ -20,6 +20,8 @@ const features: Array<ColItem> = [
     inc5:"•	Plataforma digital",
     inc6:"•	Uniforme ",
     inc7:"•	Paquete de libros y cuadernos",
+    inc8:"•	PERFIL DE EVALUACIÓN PARA DETECION DE TALENTOS",
+    inc9:"•	TEST DE INTELIGENCIAS MULTIPLES HOWARD",
     desc:"Descuentos",
     desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
     desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
@@ -35,8 +37,8 @@ const features: Array<ColItem> = [
     title: "Semi-Internado",
     anual:"Inscripción anual",
     price1:"Diciembre-febrero: $25,900",
-    price2:"Marzo-mayo: $27,400",
-    price3:"Junio-agosto: $28,900",
+    price2:"Marzo-mayo: $33,155",
+    price3:"Junio-agosto: $34,900",
     cole1:"Colegiatura 11 meses: 16,727.00",
     cole2:"Colegiatura 10 meses: 18,500.00",
     incluye: "Incluye",
@@ -47,6 +49,8 @@ const features: Array<ColItem> = [
     inc5:"•	Plataforma digital",
     inc6:"•	Uniforme ",
     inc7:"•	Paquete de libros y cuadernos",
+    inc8:"•	PERFIL DE EVALUACIÓN PARA DETECION DE TALENTOS",
+    inc9:"•	TEST DE INTELIGENCIAS MULTIPLES HOWARD",
     desc:"Descuentos",
     desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
     desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
@@ -64,8 +68,8 @@ const features2: Array<ColItem> = [
     title: "Estandar",
     anual: "Incripción anual",
     price1:"Diciembre-febrero: $26,900",
-    price2:"Marzo-mayo: $28,400",
-    price3:"Junio-agosto: $29,900",
+    price2:"Marzo-mayo: $33,155",
+    price3:"Junio-agosto: $34,900",
     cole1:"Colegiatura 11 meses: 8,363.00",
     cole2:"Colegiatura 10 meses: 9,199.00",
     incluye: "Incluye",
@@ -76,6 +80,8 @@ const features2: Array<ColItem> = [
     inc5:"•	Plataforma digital",
     inc6:"•	Uniforme ",
     inc7:"•	Paquete de libros y cuadernos",
+    inc8:"•	PERFIL DE EVALUACIÓN PARA DETECION DE TALENTOS",
+    inc9:"•	TEST DE INTELIGENCIAS MULTIPLES HOWARD",
     desc:"Descuentos",
     desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
     desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
@@ -91,8 +97,8 @@ const features2: Array<ColItem> = [
     title: "Semi-Internado",
     anual:"Inscripción anual",
     price1:"Diciembre-febrero: $26,900",
-    price2:"Marzo-mayo: $28,400",
-    price3:"Junio-agosto: $29,900",
+    price2:"Marzo-mayo: $33,155",
+    price3:"Junio-agosto: $34,900",
     cole1:"Colegiatura 11 meses: 17,727.00",
     cole2:"Colegiatura 10 meses: 19,500.00",
     incluye: "Incluye",
@@ -103,6 +109,8 @@ const features2: Array<ColItem> = [
     inc5:"•	Plataforma digital",
     inc6:"•	Uniforme ",
     inc7:"•	Paquete de libros y cuadernos",
+    inc8:"•	PERFIL DE EVALUACIÓN PARA DETECION DE TALENTOS",
+    inc9:"•	TEST DE INTELIGENCIAS MULTIPLES HOWARD",
     desc:"Descuentos",
     desc1:"•	Pago anual 10% descuento pagando antes del 30 de septiembre 2024",
     desc2:"•	Pago semestral 5% descuento, pagando 1er. semestre antes del 30 de septiembre 2024, 2do. semestre antes de 31 de enero 2025",
@@ -123,14 +131,13 @@ const features2: Array<ColItem> = [
   </Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     {
-      features.map(({ title, price1, price2, price3,cole1,cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,desc,desc1,desc2,text2, icon }) => (
+      features.map(({ title, price2, price3, cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,inc8,inc9,desc,desc1,desc2,text2, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
           <div class="size-16 rounded-full border-2 border-current p-3">
             <Icon name={icon} class="size-full" />
           </div>
           <p class="text-center font-extrabold text-xl">{title}</p>
           <p class="text-center font-bold">{anual}</p>
-          <p class="text-center text-ellipsis">{price1}</p>
           <p class="text-center text-ellipsis">{price2}</p>
           <p class="text-center text-ellipsis">{price3}</p>
           <p class="text-center font-bold">{incluye}</p>
@@ -141,7 +148,8 @@ const features2: Array<ColItem> = [
           <p class="text-center text-offset text-sm">{inc5}</p>
           <p class="text-center text-offset text-sm">{inc6}</p>
           <p class="text-center text-offset text-sm">{inc7}</p>
-          <p class="text-center text-ellipsis">{cole1}</p>
+          <p class="text-center text-offset text-sm">{inc8}</p>
+          <p class="text-center text-offset text-sm">{inc9}</p>
           <p class="text-center text-ellipsis">{cole2}</p>
           <p class="text-center font-bold">{desc}</p>
           <p class="text-center text-offset text-sm">{desc1}</p>
@@ -163,7 +171,7 @@ const features2: Array<ColItem> = [
   </Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     {
-      features2.map(({ title, price1, price2, price3,cole1,cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,desc,desc1,desc2,text2, icon }) => (
+      features2.map(({ title, price1, price2, price3,cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,inc8,inc9,desc,desc1,desc2,text2, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
           <div class="size-16 rounded-full border-2 border-current p-3">
             <Icon name={icon} class="size-full" />
@@ -181,7 +189,8 @@ const features2: Array<ColItem> = [
           <p class="text-center text-offset text-sm">{inc5}</p>
           <p class="text-center text-offset text-sm">{inc6}</p>
           <p class="text-center text-offset text-sm">{inc7}</p>
-          <p class="text-center text-ellipsis">{cole1}</p>
+          <p class="text-center text-offset text-sm">{inc8}</p>
+          <p class="text-center text-offset text-sm">{inc9}</p>
           <p class="text-center text-ellipsis">{cole2}</p>
           <p class="text-center font-bold">{desc}</p>
           <p class="text-center text-offset text-sm">{desc1}</p>

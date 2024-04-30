@@ -30,6 +30,8 @@ export interface ColItem {
   inc5: string;
   inc6: string;
   inc7: string;
+  inc8: string;
+  inc9: string;
   desc: string;
   desc1: string;
   desc2: string;

@@ -13,6 +13,7 @@ import Cass from "~/components/cass.astro";
 import News from "~/components/news.astro";
 import Colegiaturas from "~/components/colegiaturas.astro";
 import Admis from "~/components/admis.astro";
+import QuienesSomos from "~/components/quienessomos.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -70,6 +71,7 @@ const description =
     <Header />
     <Splash />
     <div class="space-y-24 px-8 py-32">
+      <QuienesSomos />
       <Intro />
       <Sports />
       <Arts />

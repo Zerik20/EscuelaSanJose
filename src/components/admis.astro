@@ -4,50 +4,51 @@ import ContentSection from "~/components/content-section.astro";
 ---
 
 <ContentSection title="Admisión" id="admis">
- 
+
   <!-- Contenido principal -->
   <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:flex md:justify-between">
-    <img src="src/assets/img/ninos.jpg" class="w-full md:w-1/2 h-auto max-w-full mb-4 md:mb-0 md:mr-4 order-last md:order-first object-cover transition-all duration-500 ease-in-out transform hover:scale-105">
+    <img src="https://images.pexels.com/photos/8422104/pexels-photo-8422104.jpeg" class="w-full md:w-1/2 h-auto max-w-full mb-4 md:mb-0 md:mr-4 order-last md:order-first object-cover transition-all duration-500 ease-in-out transform hover:scale-105">
     <div class="w-full md:w-1/2 flex flex-col justify-center items-center">
       <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-1 transition-all duration-500 ease-in-out transform" id="buttonContainer">
         <a
-          href=""
+          href="#admis"
           class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 transition-all duration-500 ease-in-out transform hover:scale-105"
+          id="privacy-button"
         >
-          <Icon name="mdi:rocket" class="size-8" />
+          <Icon name="mdi:alert" class="size-8" />
           <span>Aviso de privacidad</span>
         </a>
         <a id="toggleFormButton" href="#" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 transition-all duration-500 ease-in-out transform hover:scale-105">
-          <Icon name="mdi:telescope" class="size-8" />
+          <Icon name="mdi:form" class="size-8" />
           <span>Formulario de aplicación</span>
         </a>
       </div>
-      <form id="formulario" class="hidden mt-4 transition-all duration-500 ease-in-out transform scale-0" action="https://formsubmit.co/25f509882166613c0f4ff0fabd9ada2a" method="POST">
+      <form id="formulario" class="hidden mt-4 transition-all duration-500 ease-in-out transform scale-0" action="https://formsubmit.co/info@lyceesanjose.com" method="POST">
         <!-- Contenido de tu formulario -->
         <div class="flex flex-col items-center">
           <!-- Aquí va el contenido de tu formulario -->
           <label for="nombre" class="mb-2">Nombre del alumno:</label>
           <input type="text" id="nombre" name="name" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-      
+
           <label for="email" class="mb-2">Email del tutor:</label>
           <input type="email" id="email" name="email" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-      
+
           <label for="numero" class="mb-2">Número del tutor:</label>
           <input type="number" id="numero" name="numero" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-      
+
           <!-- Lista desplegable para el área de interés -->
           <label for="area" class="mb-2">Área de Interés:</label>
           <select id="area" name="area" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
             <option value="primaria">Primaria</option>
             <option value="secundaria">Secundaria</option>
           </select>
-      
+
           <!-- Lista desplegable para la nacionalidad -->
           <label for="nacionalidad" class="mb-2">Nacionalidad del alumno:</label>
           <input type="text" id="nacionalidad" name="nacionalidad" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" style="color: black;">
-    
+
             <!-- Agrega más opciones de nacionalidades según necesites -->
-      
+
           <!-- Botón de enviar -->
           <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Enviar</button>
         </div>
@@ -55,9 +56,31 @@ import ContentSection from "~/components/content-section.astro";
     </div>
   </div>
 
+  <!-- Aviso de privacidad -->
+  <div id="privacy-notice" class="hidden fixed top-0 left-0 w-full h-full bg-white p-4 overflow-y-auto">
+    <h1 class="text-2xl font-bold text-center text-black">Aviso de Privacidad para la Protección de Datos Personales</h1><br>
+    <p class="text-sm text-justify text-black">
+      En términos de lo previsto en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en lo sucesivo denominada como “la Ley”), Lycee de San Jose, institución de educación, establece el presente Aviso de Privacidad de conformidad con lo siguiente:
+    </p><br>
+    <h2 class="text-sm text-center text-black">Términos y Condiciones</h2><br>
+    <ul class="list-disc list-inside text-sm text-justify text-black"> 
+      <li>El presente Aviso de Privacidad tiene por objeto la protección de los datos personales de los integrantes de la institución (aspirantes, alumnos, egresados, personal directivo, personal docente y personal administrativo), mediante su tratamiento legítimo, controlado e informado, a efecto de garantizar su privacidad, así como tu derecho a la autodeterminación informativa.</li> 
+      <li>Dato Personal es Cualquier información concerniente a una persona física identificada o identificable; el responsable de recabar los datos personales es el área de mercadotecnia (procesos de promoción e inscripción de alumnos); el área de administración escolar (una vez que los alumnos se hayan inscrito formalmente); y el área de recursos humanos (para personal directivo, docente y administrativo).</li> 
+      <li>Al proporcionar tus Datos Personales por escrito, a través de una solicitud, formato en papel, formato digital, correo electrónico, o cualquier otro documento, aceptas y autorizas a Lycee de San José, utilizar y tratar de forma automatizada tus datos personales e información suministrados, los cuales formarán parte de nuestra base de datos con la finalidad de usarlos, en forma enunciativa, más no limitativa, para: identificarte, ubicarte, comunicarte, contactarte, enviarte información y/o bienes, así como para enviarlos y/o transferirlos a terceros, dentro y fuera del territorio nacional, por cualquier medio que permita la ley para cumplir con nuestros fines sociales.</li> 
+      <li>Mediante la aceptación y autorización para el tratamiento de tus datos personales en los términos antes señalados, nos facultas expresamente a transferirlos a autoridades de cualquier nivel (Federales, Estatales, Municipales), organismos públicos y privados, diversas empresas y/o personas físicas, dentro y fuera de México, con el propósito de certificar tus estudios y competencias, así como para participar en sus procesos de selección de personal y aplicar a los diversos puestos de trabajo vacantes que éstas publiquen en nuestra Bolsa de Trabajo; y nos autorizas a poder emitir y entregar documentación oficial o no, a tus familiares y/o representantes legales.</li> 
+      <li>La temporalidad del manejo de tus Datos Personales será indefinida a partir de la fecha en que nos los proporciones, pudiendo oponerte al manejo de los mismos en cualquier momento que lo consideres oportuno, con las limitaciones de Ley; en caso de que tu solicitud de oposición sea procedente, el Colegio Montreal dejará de manejar tus Datos Personales sin ninguna responsabilidad de nuestra parte. Quedan fuera de este supuesto las Bases de Datos referentes a las calificaciones y demás información académica de los alumnos, ex alumnos y egresados del Lycee de San José, y alumnos en movilidad o en intercambio provenientes de otras instituciones.</li> 
+      <li>El área del Lycee de San José responsable del tratamiento de tus datos personales, está obligada a cumplir con los principios de licitud, consentimiento, información, calidad, finalidad, lealtad, proporcionalidad y responsabilidad tutelados en la Ley; por tal motivo con fundamento en los artículos 13 y 14 de la Ley, la Bolsa de Trabajo se compromete a guardar estricta confidencialidad de tus datos personales, así como a mantener las medidas de seguridad administrativas, técnicas y físicas que permitan protegerlos contra cualquier daño, pérdida, alteración, acceso o tratamiento no autorizado.</li> 
+      <li>En términos de lo establecido por el artículo 22 de la Ley, tienes derecho en cualquier momento a ejercer tus derechos de acceso, rectificación, cancelación y oposición (derechos ARCO) al tratamiento de tus datos personales a partir del 6 de enero del 2012, mediante la solicitud vía correo electrónico dirigido a Mtro. Emmanuel A. Hernández Muñoz al correo 
+        <a href="mailto:rh@montreal.com.mx" class="underline text-black">rh@montreal.com.mx</a>, o al correo <a href="mailto:contacto@montreal.com.mx" class="underline">contacto@montreal.com.mx</a>; estableciendo como asunto del correo "Derechos ARCO” para proceder con la solicitud.</li> 
+        <li>El Lycee de San José ocasionalmente modificará y corregirá este Aviso de Privacidad.</li> <li>El Lycee de San José protegerá tus Datos Personales en los términos de la Ley, y te comunicará los elementos contenidos en las fracciones del artículo 16 de la Ley.</li> 
+        <li>El hecho de cubrir el pago de inscripción al Lycee de San José y seleccionar asignaturas, es un hecho que presume tu total aceptación al contenido del presente Aviso de Privacidad.</li> 
+      </ul><br><br>
+      <div class="flex justify-center"> <button id="accept-privacy" class="flex justify-center items-center bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Aceptar</button> </div><br><br>
+  </div>
+
   <!-- Script -->
   <script>
-    const toggleForm = (event: MouseEvent) => {
+    const toggleForm = (event) => {
       event.preventDefault();
       const form = document.getElementById('formulario');
       const buttonContainer = document.getElementById('buttonContainer');
@@ -72,5 +95,42 @@ import ContentSection from "~/components/content-section.astro";
     if (toggleFormButton) {
       toggleFormButton.addEventListener('click', toggleForm);
     }
+
+    const privacyButton = document.getElementById('privacy-button');
+    const privacyNotice = document.getElementById('privacy-notice');
+    const acceptButton = document.getElementById('accept-privacy');
+
+    privacyButton.addEventListener('click', () => {
+      privacyNotice.classList.remove('hidden');
+    });
+
+    acceptButton.addEventListener('click', () => {
+      privacyNotice.classList.add('hidden');
+    });
   </script>
+
+  <!-- Agrega estilos CSS para que el aviso de privacidad sea responsive -->
+  <style>
+#privacy-notice {
+  /* ... */
+  position: fixed; /* fija el popup en la pantalla */
+  width: 800px; /* establece un ancho fijo para el popup */
+  height: 600px; /* establece una altura fija para el popup */
+  margin: 50px auto; /* agrega un margen para que se vea bien */
+  border-radius: 10px; /* agrega un borde redondeado */
+  left: 50%; /* centra el popup horizontalmente */
+  top: 50%; /* centra el popup verticalmente */
+  transform: translate(-50%, -50%); /* centra el popup vertical y horizontalmente */
+  background-color: white; /* establece un fondo blanco para el popup */
+  padding: 20px; /* agrega un padding para que se vea bien */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* agrega una sombra para que se vea bien */
+}
+
+    @media (max-width: 768px) {
+      #privacy-notice {
+        max-width: 90%; /* ajusta el ancho máximo para pantallas pequeñas */
+      }
+    }
+  </style>
+
 </ContentSection>

@@ -7,26 +7,59 @@ import ContentSection from "~/components/content-section.astro";
   <Icon slot="eyebrow" name="logomark" class="size-32" />
   
   <Fragment slot="lead" class="text-lg md:text-xl lg:text-2xl xl:text-3xl">
-    <div class="md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto text-center">
-      <h1 class="text-2xl">Misión</h1><br>
-      Nos obsesiona la necesidad suprema de educar todas las áreas del ser humano, no sola la mente si no el cuerpo el alma y el espíritu;  el  
-      <span class="text-primary">LYCÉE DE SAN JOSÉ</span> tiene como objetivo desarrollar todas las áreas de los estudiantes utilizando el mejor
-       <span class="text-primary">Sistema Educativo Internacional,</span> los mejores programas deportivos, así como programas humanitarios y sociales.
-    </div><br>
-    <div class="md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto text-center">
-      <h1 class="text-2xl">Visión</h1><br>
-      Nos obsesiona la necesidad suprema de educar todas las áreas del ser humano, no sola la mente si no el cuerpo el alma y el espíritu;  el  
-      <span class="text-primary">LYCÉE DE SAN JOSÉ</span> tiene como objetivo desarrollar todas las áreas de los estudiantes utilizando el mejor
-       <span class="text-primary">Sistema Educativo Internacional,</span> los mejores programas deportivos, así como programas humanitarios y sociales.
-    </div><br>
-    <div class="md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto text-center">
-      <h1 class="text-2xl">Valores</h1><br>
-      Nos obsesiona la necesidad suprema de educar todas las áreas del ser humano, no sola la mente si no el cuerpo el alma y el espíritu;  el  
-      <span class="text-primary">LYCÉE DE SAN JOSÉ</span> tiene como objetivo desarrollar todas las áreas de los estudiantes utilizando el mejor
-       <span class="text-primary">Sistema Educativo Internacional,</span> los mejores programas deportivos, así como programas humanitarios y sociales.
+    <div class="content-section">
+      <div class="text-section">
+        <h1 class="font-bold xl:text-2xl text-center">Misión</h1><br>
+        Nuestra misión en 
+        <span class="text-primary">LYCÉE DE SAN JOSÉ</span> es educar a los futuros lideres que la sociedad necesita.
+         <span class="text-primary">Hacemos esto a través</span> de la excelencia académica, artística y  deportiva.
+      </div>
+      <div class="text-section">
+        <h1 class="font-bold xl:text-2xl text-center">Visión</h1><br>
+        <p class="text-justify">
+          Ser el estándar para la excelencia académica,  
+          <span class="text-primary">deportiva y  artística en la educación</span> básica y media.
+        </p>
+      </div>
+      <div class="text-section">
+        <h1 class="font-bold xl:text-2xl text-center">Valores</h1><br>
+        <ul>
+          <li class="text-center">
+            <span class="text-primary"> •	Integridad</span><br>
+            <span class=""> •	Fraternidad</span><br>
+            <span class="text-primary"> •	Espritualidad</span><br>
+            <span class=""> •	Conciencia Social</span><br>
+            <span class="text-primary"> •	Excelcia</span><br>
+            <span class=""> •	Progreso</span><br>
+          </li>
+        </ul>
+      </div>
     </div>
   </Fragment>
 </ContentSection>
+
+<style>
+.content-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-section {
+  flex: 1;
+  margin: 0 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .text-section {
+    margin: 1em 0;
+  }
+}
+</style>
+
 
 
   <!--/Fragment>

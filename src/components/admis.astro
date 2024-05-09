@@ -18,6 +18,14 @@ import ContentSection from "~/components/content-section.astro";
           <Icon name="mdi:alert" class="size-8" />
           <span>Aviso de privacidad</span>
         </a>
+        <a
+          href="#admis"
+          class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 transition-all duration-500 ease-in-out transform hover:scale-105"
+          id="preguntas-button"
+        >
+          <Icon name="mdi:account-question" class="size-8" />
+          <span>Preguntas Frecuentes</span>
+        </a>
         <a id="toggleFormButton" href="#" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 transition-all duration-500 ease-in-out transform hover:scale-105">
           <Icon name="mdi:form" class="size-8" />
           <span>Formulario de aplicación</span>
@@ -78,6 +86,60 @@ import ContentSection from "~/components/content-section.astro";
       <div class="flex justify-center"> <button id="accept-privacy" class="flex justify-center items-center bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Aceptar</button> </div><br><br>
   </div>
 
+  <!-- Preguntas Frecuentes -->
+  <div id="preguntas-notice" class="hidden fixed top-0 left-0 w-full h-full bg-white p-4 overflow-y-auto">
+    <h1 class="text-2xl font-bold text-center text-black">Preguntas Frecuentes</h1><br>
+    <h2 class="text-l font-bold text-center text-black"> ¿Cuándo puedo iniciar el proceso de admisión?</h2> <br>
+    <p style="text-align: center; color: black;">Las familias pueden presentar solicitudes en cualquier momento durante el ciclo escolar, pero las solicitudes presentadas con anticipación a la fecha límite establecida, recibirán consideración prioritaria. Las solicitudes recibidas después de los plazos establecidos, serán consideradas como extemporáneas y estarán sujetas a espacio.
+    </p><br>
+    <h2 class="text-l font-bold text-center text-black"> ¿Cuáles son los requisitos para iniciar el proceso de admisión?</h2> <br>
+      <ul style="text-align: left; margin-left: 40px; color: black">
+        <li>1. Entrevista con la familia.</li>
+        <li>2. Llenar la solicitud de ingreso.</li>
+        <li>3. Envío de documentación completa.</li>
+        <li>4. Revisión de la documentación por Dirección Académica (la cual debe de cumplir con los requisitos del colegio).</li>
+        <li>5. Disponibilidad de espacio.</li>
+      </ul><br>
+    <h2 class="text-l font-bold text-center text-black"> ¿Cuál es la documentación que se necesita?</h2><br>
+    <h3 class="text-M text-center text-black"> La documentación que se solicita por alumno (a) es la siguiente:</h3> <br>
+      <ul style="text-align: left; margin-left: 40px; color: black;">
+        <li>•	Certificado de nacimiento.</li>
+        <li>•	CURP.</li>
+        <li>•	Calificaciones oficiales de los últimos 3 años escolares (en caso de que aplique).</li>
+        <li>•	Constancia de estudios del colegio actual.</li>
+        <li>•	Carta de buena conducta del colegio actual.</li>
+        <li>•	Carta de no adeudo del colegio actual (solo aplicable para escuelas privadas, la cual prueba de que todas las cuotas escolares previas han sido cubiertas).</li>
+        <li>•	Identificación oficial de los padres/tutores.</li>
+        <li>•	Comprobante de domicilio.</li>
+        <li>•	Carta de recomendación y/o referencia de familia.</li>
+        <li>•	Cartilla de vacunación actualizada (solo maternal y preescolar).</li>
+        <li>•	Formatos de recomendación, los cuales deberán de ser llenados por la escuela actual del alumno (a) (a partir de 1° de primaria)</li>
+      </ul><br>
+      <h2 class="text-l font-bold text-center text-black"> ¿Cómo se decide la admisión en Lycée San José?</h2><br>
+      <p style="text-align: center; color: black;">
+        La admisión a Lycée San José se basa en la entrevista con la familia, la disponibilidad de espacio, una evaluación exitosa y la composición del expediente del alumno (a).
+
+        Lycée San José busca estudiantes que se beneficien del programa de aprendizaje, que puedan aportar sus propios talentos, habilidades, imaginación y curiosidad a la comunidad escolar Lycée San José, además de familias que puedan fortalecer y estrechar lazos con la comunidad Lycée San José.
+      </p><br>
+      <h2 class="text-l font-bold text-center text-black"> ¿Existen grupos de espera?</h2><br>
+      <p style="text-align: center; color: black;">
+        Sí, tenemos estudiantes en lista de espera para muchos de nuestros grados. Los estudiantes que han realizado el proceso de admisión y que se consideran calificados se les puede pedir que se unan a la lista de espera debido a limitaciones de espacio. Los estudiantes en la lista de espera que no pueden ser admitidos en el ciclo en curso, tiene la opción de esperar y realizar el proceso de admisión para el siguiente año.
+      </p><br>
+      <h2 class="text-l font-bold text-center text-black"> ¿Cómo sé si mi hijo (a) ha sido aceptado (a)?</h2><br>
+      <p style="text-align: center; color: black;">
+        Después de que el alumno (a) presente las evaluaciones, la familia tendrá una entrevista de retroalimentación con un miembro de Dirección Académica, el cual les proporcionará los resultados de las evaluaciones y les entregará el formato de registro para continuar con el proceso de admisión, en caso de ser aceptado (a).
+      </p><br>
+      <h2 class="text-l font-bold text-center text-black"> Mi hijo (a) ha sido aceptado (a), ¿Qué proceso sigue?</h2><br>
+      <p style="text-align: center; color: black;">
+        Si el estudiante ha sido aceptado (a), la familia tendrá 2 semanas para cubrir las cuotas de inscripción para poder asegurar su espacio.
+      </p><br>
+      <h2 class="text-l font-bold text-center text-black"> ¿Qué pasa si mi hijo (a) no fue aceptado (a)?</h2><br>
+      <p style="text-align: center; color: black;">
+        Si su hijo (a) no fue aceptado (a), el colegio notificará la decisión y los motivos de ésta.
+      </p><br>
+      <div class="flex justify-center"> <button id="accept-preguntas" class="flex justify-center items-center bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Aceptar</button> </div><br><br>
+  </div>
+
   <!-- Script -->
   <script>
     const toggleForm = (event) => {
@@ -107,6 +169,20 @@ import ContentSection from "~/components/content-section.astro";
     acceptButton.addEventListener('click', () => {
       privacyNotice.classList.add('hidden');
     });
+
+    // Script Preguntas Frecuentes
+
+    const preguntasButton = document.getElementById('preguntas-button');
+    const preguntasNotice = document.getElementById('preguntas-notice');
+    const acceptoButton = document.getElementById('accept-preguntas');
+
+    preguntasButton.addEventListener('click', () => {
+      preguntasNotice.classList.remove('hidden');
+    });
+
+    acceptoButton.addEventListener('click', () => {
+      preguntasNotice.classList.add('hidden');
+    });
   </script>
 
   <!-- Agrega estilos CSS para que el aviso de privacidad sea responsive -->
@@ -128,6 +204,26 @@ import ContentSection from "~/components/content-section.astro";
 
     @media (max-width: 768px) {
       #privacy-notice {
+        max-width: 90%; /* ajusta el ancho máximo para pantallas pequeñas */
+      }
+    }
+#preguntas-notice {
+  /* ... */
+  position: fixed; /* fija el popup en la pantalla */
+  width: 800px; /* establece un ancho fijo para el popup */
+  height: 600px; /* establece una altura fija para el popup */
+  margin: 50px auto; /* agrega un margen para que se vea bien */
+  border-radius: 10px; /* agrega un borde redondeado */
+  left: 50%; /* centra el popup horizontalmente */
+  top: 50%; /* centra el popup verticalmente */
+  transform: translate(-50%, -50%); /* centra el popup vertical y horizontalmente */
+  background-color: white; /* establece un fondo blanco para el popup */
+  padding: 20px; /* agrega un padding para que se vea bien */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* agrega una sombra para que se vea bien */
+}
+
+    @media (max-width: 768px) {
+      #preguntas-notice {
         max-width: 90%; /* ajusta el ancho máximo para pantallas pequeñas */
       }
     }

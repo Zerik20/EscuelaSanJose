@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Lycée San José</name>
+	<gx:CascadingStyle kml:id="__managed_style_2A3B55B2843094DBA3CA">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4.8</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_15065C53193094DBA3CA">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3.2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_06AFC3196E3094DBA3CA">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_15065C53193094DBA3CA</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2A3B55B2843094DBA3CA</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0F215F9D973094DB26EC">
+		<name>Lycée San José</name>
+		<LookAt>
+			<longitude>-89.49887352603072</longitude>
+			<latitude>21.13792635919212</latitude>
+			<altitude>7.339443079608621</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>243.7788610901407</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06AFC3196E3094DBA3CA</styleUrl>
+		<Point>
+			<coordinates>-89.4984786712434,21.13786537100242,6.902828214955943</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

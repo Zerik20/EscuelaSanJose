@@ -3,13 +3,33 @@ import { Icon } from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 ---
 
+
 <ContentSection title="Ubicación" id="ubicacion">
   <!--Icon slot="eyebrow" name="logomark" class="size-32" /-->
   <Fragment slot="lead" class="text-lg md:text-xl lg:text-2xl xl:text-3xl">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3406.4055127377355!2d-89.498526!3d21.137877!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1715293219160!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+    <div class="map-container flex justify-center items-center">
+      <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d851.6013026193829!2d-89.4991437304494!3d21.137890149652883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDA4JzE2LjQiTiA4OcKwMjknNTQuNiJX!5e1!3m2!1ses-419!2smx!4v1715370301282!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>           
   </Fragment>
 </ContentSection>
+
+<style>
+.map-container {
+  width: 90%;
+  height: 0;
+  padding-bottom: 56.25%; /* Este valor puede ajustarse según las necesidades */
+  position: relative;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+</style>
+
+
 
 
 

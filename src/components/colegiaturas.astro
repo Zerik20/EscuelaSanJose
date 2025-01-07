@@ -5,7 +5,7 @@ import type { ColItem } from "~/types";
 
 const features: Array<ColItem> = [
   {
-    title: "Primaria Estandar",
+    title: "Primaria",
     anual: "Incripción anual",
     price1:"Efectivo o transferencia (pagando en una sola exhibición): $17,700",
     price2:"Pago con descuento: $16,805",
@@ -33,6 +33,7 @@ const features: Array<ColItem> = [
     horario:"Horario de 7am a 2pm",
     icon: "mdi:weather-sunny",
   },
+  /*
   {
     title: "Primaria Semi-Internado",
     anual:"Inscripción anual",
@@ -61,11 +62,11 @@ const features: Array<ColItem> = [
     horario:"Horario de 7am a 6pm",
     text2:"Incluyen desayuno, comida y colaciones",
     icon: "mdi:weather-sunset-down",
-  },
+  },*/
 ];
 const features2: Array<ColItem> = [
   {
-    title: "Secundaria Estandar",
+    title: "Secundaria", /*Añade Estandar*/
     anual: "Incripción anual",
     price1:"Efectivo o transferencia (pagando en una sola exhibición): $17,700",
     price2:"Pago con descuento: $16,805",
@@ -92,7 +93,7 @@ const features2: Array<ColItem> = [
     text2:"",
     horario:"Horario de 7am a 2pm",
     icon: "mdi:weather-sunny",
-  },
+  },/*
   {
     title: "Secundaria Semi-Internado",
     anual:"Inscripción anual",
@@ -121,15 +122,15 @@ const features2: Array<ColItem> = [
     horario:"Horario de 7am a 6pm",
     text2:"Incluyen desayuno, comida y colaciones",
     icon: "mdi:weather-sunset-down",
-  },
+  },*/
 ];
 ---
 
 <ContentSection title="Colegiaturas" id="colegiaturas">
   <Fragment slot="lead">
-    Primaria
+    <!--Primaria-->
   </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-1 lg:grid-cols-1"> <!--Cambia md:grid-cols-2 lg:grid-cols-2 para tener las 2 columnas normales -->
     {
       features.map(({ title,price1, price2, price3, cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,inc8,inc9,desc,desc1,desc2,text2, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
@@ -157,9 +158,9 @@ const features2: Array<ColItem> = [
 </ContentSection>
 <ContentSection title="" id="">
   <Fragment slot="lead">
-    Secundaria
+    <!--Secundaria-->
   </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-1 lg:grid-cols-1"> <!--Cambia md:grid-cols-2 lg:grid-cols-2 para tener las 2 columnas normales -->
     {
       features2.map(({ title, price1, price2, price3,cole2,extra,title2,dp,idiom,horario,anual,incluye,inc1,inc2,inc3,inc4,inc5,inc6,inc7,inc8,inc9,desc,desc1,desc2,text2, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">

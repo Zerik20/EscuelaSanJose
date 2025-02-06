@@ -15,6 +15,11 @@ import Colegiaturas from "~/components/colegiaturas.astro";
 import Admis from "~/components/admis.astro";
 import QuienesSomos from "~/components/quienessomos.astro";
 import Ubicacion from "~/components/ubicacion.astro";
+import Anuncio from "~/components/Anuncio.astro";
+import Contacto from "~/components/Contacto.astro";
+import LoMejor from "~/components/lomejor.astro";
+import Valores from "~/components/Valores.astro";
+import Campus from "~/components/Campus.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -75,16 +80,25 @@ const description =
     <div class="space-y-24 px-8 py-32">
       <Intro />
       <Sports />
+      <LoMejor/>
       <Arts />
       <Admis />
       <Reto />
+      <Campus/>
       <Cass />
-      <Colegiaturas />
+      <!--Colegiaturas /-->
       <QuienesSomos />
+      <Valores />
       <Ubicacion />
       <!--Features /-->
       <News />
+      <Contacto/>
     </div>
     <Footer />
+    <Anuncio 
+  desktopImage="/img/Horizontal.png" 
+  mobileImage="/img/Vertical.png" 
+/>	
+    
   </body>
 </html>

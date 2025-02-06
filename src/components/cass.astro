@@ -24,23 +24,25 @@ const features: Array<FeatureItem> = [
 ];
 ---
 
-<ContentSection title="C.A.D.S" id="cass">
+<ContentSection title="C.A.D.S" id="cass" class="py-12 px-6 bg-gradient-to-r from-blue-500 to-blue-900 rounded-lg shadow-lg">
   <Fragment slot="lead">
-    Proporcionamos a los estudiantes 
-    <span class="text-primary">experiencias en diversas áreas </span>
-    para promover su desarrollo holístico, 
-    <span class="text-primary">formar individuos bien preparados </span>
-    y equilibrados <span class="text-primary">.</span>
-</Fragment>
+    <p class="text-center text-lg md:text-xl font-medium leading-relaxe">
+      Proporcionamos a los estudiantes 
+      <span class="text-primary font-semibold">experiencias en diversas áreas</span>
+      para promover su desarrollo holístico, 
+      <span class="text-primary font-semibold">formar individuos bien preparados</span>
+      y equilibrados.
+    </p>
+  </Fragment>
 
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto mt-10">
     {
       features.map(({ title, background }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6" style={`background-image: url('${background}'); background-size: cover; background-position: center;`}>
-          <div class="size-16 rounded-full border-0 border-current p-10">
-          </div>
-          <p class="text-center font-extrabold text-xl" style="color: rgb(0, 10, 65);text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);">{title}</p>
-
+        <li class="relative flex flex-col items-center justify-center p-6 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105" style={`background-image: url('${background}'); background-size: cover; background-position: center;`}>
+          <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
+          <p class="relative z-10 text-center text-2xl font-bold tracking-wide drop-shadow-lg text-black dark:text-white">
+            {title}
+          </p>
         </li>
       ))
     }

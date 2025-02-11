@@ -9,6 +9,7 @@ export interface Props {
 }
 
 const { items, title, url } = Astro.props;
+const isOdd = items.length % 2 !== 0;
 ---
 
 <div class="w-full max-w-6xl space-y-2">
@@ -18,20 +19,21 @@ const { items, title, url } = Astro.props;
     >
       {title}
     </h3>
-    <ul class="grid grid-cols-2 gap-8 smrid-cols-3 md:grid-cols-7">
-      {
-        items.map((item) => (
-          <li>
-            <a class="flex flex-col items-center gap-2" href={item.url}>
-              <Icon class="size-12" name={item.icon} />
-              <span style="font-size: 80%; text-align: center;">{item.title}</span>
-            </a>
-          </li>
-        ))
-      }
+    <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-8">
+      {items.map((item, index) => (
+        <li 
+          class={
+            isOdd && index === items.length - 1 
+            ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto" 
+            : ""
+          }
+        >
+          <a class="flex flex-col items-center gap-2" href={item.url}>
+            <Icon class="size-12" name={item.icon} />
+            <span style="font-size: 80%; text-align: center;">{item.title}</span>
+          </a>
+        </li>
+      ))}
     </ul>
   </div>
-  <!--p class="text-right text-sm">
-    <a class="text-primary" href={url}> ...y más &rarr;</a>
-  </-p-->
 </div>
